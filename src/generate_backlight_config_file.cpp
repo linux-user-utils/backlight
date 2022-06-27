@@ -1,4 +1,4 @@
-#include "backlight.hpp"
+#include <luu/backlight.hpp>
 #include "logging.hpp"
 #include "parse_arguments.hpp"
 #include "utility.hpp"
