@@ -7,6 +7,7 @@ set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include (GNUInstallDirs)
 find_package(Threads REQUIRED)
+find_package(libluu REQUIRED)
 option(STRICT_COMPILER_FLAGS "Use strict compiler flags" ON)
 configure_file(src/version.hpp.in project_version.hpp)
 
