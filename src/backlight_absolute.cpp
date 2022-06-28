@@ -1,8 +1,8 @@
-#include <luu/backlight.hpp>
-#include "logging.hpp"
-#include "parse_arguments.hpp"
-#include "utility.hpp"
+#include <libluu/utility.hpp>
 #include <filesystem>
+#include <libluu/backlight.hpp>
+#include <libluu/logging.hpp>
+#include <libluu/parse_arguments.hpp>
 #include <vector>
 
 using std::vector;
