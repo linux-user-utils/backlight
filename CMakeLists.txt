@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.23)
 project(backlight
     VERSION 0.0.5
     DESCRIPTION "Simple CLI backlight adjustment utility for Linux"
@@ -24,7 +24,7 @@ add_executable( bli
         target_compile_options( bli
             PRIVATE -Wall -Wextra -pedantic -Werror )
     endif(STRICT_COMPILER_FLAGS)
-    target_link_libraries( bli libluu)
+    #target_link_libraries( bli libluu)
     install(TARGETS bli
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
@@ -42,7 +42,7 @@ add_executable( bld
             PRIVATE -Wall -Wextra -pedantic -Werror )
     endif(STRICT_COMPILER_FLAGS)
 
-target_link_libraries(bld libluu)
+    #target_link_libraries(bld libluu)
     install(TARGETS bld
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
@@ -60,7 +60,7 @@ add_executable( bla
             PRIVATE -Wall -Wextra -pedantic -Werror )
     endif (STRICT_COMPILER_FLAGS)
 
-target_link_libraries(bla libluu)
+    #target_link_libraries(bla libluu)
     install(TARGETS bla
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
@@ -78,7 +78,7 @@ add_executable( bl-scanner
             PRIVATE -Wall -Wextra -pedantic -Werror )
     endif( STRICT_COMPILER_FLAGS)
 
-target_link_libraries(bl-scanner libluu)
+    #target_link_libraries(bl-scanner libluu)
     install(TARGETS bl-scanner
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
