@@ -7,7 +7,7 @@ set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include (GNUInstallDirs)
 find_package(Threads REQUIRED)
-find_package(libluu REQUIRED)
+
 option(STRICT_COMPILER_FLAGS "Use strict compiler flags" ON)
 configure_file(src/version.hpp.in project_version.hpp)
 
@@ -24,7 +24,7 @@ add_executable( bli
         target_compile_options( bli
             PRIVATE -Wall -Wextra -pedantic -Werror )
     endif(STRICT_COMPILER_FLAGS)
-    target_link_libraries( bli backlight)
+    target_link_libraries( bli libluu)
     install(TARGETS bli
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
@@ -41,7 +41,8 @@ add_executable( bld
         target_compile_options( bld
             PRIVATE -Wall -Wextra -pedantic -Werror )
     endif(STRICT_COMPILER_FLAGS)
-    target_link_libraries (bld backlight)
+
+target_link_libraries(bld libluu)
     install(TARGETS bld
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
@@ -58,7 +59,8 @@ add_executable( bla
         target_compile_options( bla
             PRIVATE -Wall -Wextra -pedantic -Werror )
     endif (STRICT_COMPILER_FLAGS)
-    target_link_libraries(bla backlight)
+
+target_link_libraries(bla libluu)
     install(TARGETS bla
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
@@ -75,7 +77,8 @@ add_executable( bl-scanner
         target_compile_options( bl-scanner
             PRIVATE -Wall -Wextra -pedantic -Werror )
     endif( STRICT_COMPILER_FLAGS)
-    target_link_libraries(bl-scanner backlight)
+
+target_link_libraries(bl-scanner libluu)
     install(TARGETS bl-scanner
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
